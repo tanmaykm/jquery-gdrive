@@ -1,0 +1,33 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<input id="gdrive_file" type="text"> <a href="#" id="gdrive_file_selector">Select file</a><br/>
+			<input id="gdrive_folder" type="text"> <a href="#" id="gdrive_folder_selector">Select folder</a><br/>
+		</form>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="//apis.google.com/js/client.js"></script>
+		<script type="text/javascript" src="../jquery-gdrive.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$().gdrive('init', {
+					'devkey': 'AIzaSyAiX29-TMkuuvTGfHdv1FeH4hXpevMMhyw',
+					'appid': '929840368812-7eg5bbjl9v7j3kbhb0ajgu8a2ans3dq2.apps.googleusercontent.com'
+				});
+				
+				$('#gdrive_file').gdrive('set', {
+					'trigger': 'gdrive_file_selector', 
+					'header': 'Select a file', 
+					'filter': ''
+				});
+				$('#gdrive_folder').gdrive('set', {
+					'trigger': 'gdrive_folder_selector', 
+					'header': 'Select a folder', 
+					'filter': 'application/vnd.google-apps.folder'
+				});
+			});
+		</script>
+	</body>
+</html>
