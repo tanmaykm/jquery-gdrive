@@ -10,16 +10,17 @@ Such applications often need to let the user choose files and folders from their
 
 
 ````
-\<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-\<script src="//apis.google.com/js/client.js"></script>
-\<script src="jquery-gdrive.js"></script>
-\<script type="text/javascript">
-	$(document).ready(function() {
-		$().gdrive('init', {
-			'devkey': 'YOUR GOOGLE DEVELOPMENT KEY HERE',
-			'appid': 'YOUR GOOGLE APPLICATION ID HERE'
-	});
-\</script>
+    
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script src="//apis.google.com/js/client.js"></script>
+ <script src="jquery-gdrive.js"></script>
+ <script type="text/javascript">
+   $(document).ready(function() {
+     $().gdrive('init', {
+       'devkey': 'YOUR GOOGLE DEVELOPMENT KEY HERE',
+       'appid': 'YOUR GOOGLE APPLICATION ID HERE'
+ });
+ </script>
 ````
 
 ### Authenticating to Google
