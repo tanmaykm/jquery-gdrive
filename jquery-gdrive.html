@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>jquery-gdrive by tanmaykm</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>jquery-gdrive</h1>
+        <h2>JQuery Plugin for Google Drive API</h2>
+        <a href="https://github.com/tanmaykm/jquery-gdrive" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="jquery-plugin-for-google-drive-api" class="anchor" href="#jquery-plugin-for-google-drive-api"><span class="octicon octicon-link"></span></a>JQuery Plugin for Google Drive API</h1>
+		<form>
+			<input id="gdrive_file" type="text"> <a href="#" id="gdrive_file_selector">Select file</a><br/>
+			<input id="gdrive_folder" type="text"> <a href="#" id="gdrive_folder_selector">Select folder</a><br/>
+		</form>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="//apis.google.com/js/client.js"></script>
+		<script type="text/javascript" src="jquery-gdrive.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$().gdrive('init', {
+					'devkey': 'AIzaSyAiX29-TMkuuvTGfHdv1FeH4hXpevMMhyw',
+					'appid': '929840368812-7eg5bbjl9v7j3kbhb0ajgu8a2ans3dq2.apps.googleusercontent.com'
+				});
+				
+				$('#gdrive_file').gdrive('set', {
+					'trigger': 'gdrive_file_selector', 
+					'header': 'Select a file', 
+					'filter': ''
+				});
+				$('#gdrive_folder').gdrive('set', {
+					'trigger': 'gdrive_folder_selector', 
+					'header': 'Select a folder', 
+					'filter': 'application/vnd.google-apps.folder'
+				});
+			});
+		</script>
+
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/tanmaykm/jquery-gdrive/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/tanmaykm/jquery-gdrive/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
+
+
