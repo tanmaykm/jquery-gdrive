@@ -140,6 +140,17 @@
 		if(action == 'user') {
 			return gopts.user;
 		}
+        if(action == 'setauth') {
+            var elem_opts = $.extend({'uid': null, 'token': null, 'callback': null}, options);
+            var target_uid = elem_opts.uid;
+            var target_tok = elem_opts.token;
+            var callback = elem_opts.callback;
+            do_auth(function() {
+                if(null != target_uid) $('#'+target_uid).val(gopts.user);
+                if(null != target_tok) $('#'+target_tok).val(gopts.authtok);
+                if(null != callback) callback();
+            });
+        }
 		if(action == 'debug') {
 			return gopts;
 		}
