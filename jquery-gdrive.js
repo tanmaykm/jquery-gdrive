@@ -75,7 +75,7 @@
 		$('#'+target_id).val('');
 		var elem_opts = dlgopts[target_id];
 		
-		var view = new google.picker.DocsView(google.picker.ViewId.FOLDERS);
+		var view = new google.picker.DocsView(google.picker.ViewId.DOCS);
 		view.setMode(google.picker.DocsViewMode.LIST);
 		if(elem_opts.filter == 'application/vnd.google-apps.folder') {
 			view.setSelectFolderEnabled(true);
